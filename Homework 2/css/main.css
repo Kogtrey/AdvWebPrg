@@ -1,0 +1,13 @@
+body{
+  margin: 0;
+}
+.nav-bar{
+  text-align: left;
+  font-size: 30px;
+  padding:5px;
+  color: white;
+  background-color: #404040;
+}
+
+.nav-bar .search-container{
+  text-align: center;

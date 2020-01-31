@@ -1,3 +1,5 @@
+/* Most styles inspired by W3Schools */
+
 Body {
   background-color: #404040;
 }
@@ -26,7 +28,6 @@ a:link, a:visited {
 a:hover, a:active {
   background-color: lightgrey;
 }
-
 
 .header {
   padding: 10px;

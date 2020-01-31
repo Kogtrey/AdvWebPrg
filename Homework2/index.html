@@ -3,41 +3,63 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../CSS/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>eCommerce site</title>
   </head>
   <body>
       <div class="nav-bar">
-        <span>eBuy</span>
+        <div class="logo-container w3-third">
+          <h1>eBuy</h1>
 
-        <div class="search-container">
+        </div>
+        <div class="search-container w3-third ">
           <input type="text" placeholder="Search..."name="search">
           <button type="button" name="search-button">Submit</button>
+
+        </div>
+        <div class="account-container w3-third">
+          <i id="main-bars" class="fa fa-bars w3-right w3-jumbo w3-btn" onclick="ShowDropdown()"></i>
+          <div id="dropdown" class="dropdown w3-right w3-card" style="display: none;">
+            <div class="header">
+              <h2 class="w3-left drop-head">Account</h2>
+              <i class="fa fa-bars w3-right w3-jumbo w3-btn" onclick="ShowDropdown()"></i>
+            </div>
+            <ul>
+              <li>Account</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <div class="main-body">
+        <div class="filter-column Left">
+          <h3>Filters</h3>
+          <label class="container">One
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Two
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="container">Three
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+
         </div>
 
       </div>
 
-      <div class="filter-column Left">
-        <h3>Filters</h3>
-        <label class="container">One
-          <input type="checkbox" checked="checked">
-          <span class="checkmark"></span>
-        </label>
-
-        <label class="container">Two
-          <input type="checkbox" checked="checked">
-          <span class="checkmark"></span>
-        </label>
-
-        <label class="container">Three
-          <input type="checkbox" checked="checked">
-          <span class="checkmark"></span>
-        </label>
-
-      </div>
       <div class="footer">
         <a href="">About</a>
         <a href="">Info</a>
         <a href="">Other</a>
       </div>
   </body>
+  <script src="./js/main.js"></script>
+
 </html>

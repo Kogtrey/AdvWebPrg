@@ -1,24 +1,63 @@
+html{
+  height: 100%;
+}
 body{
   margin: 0;
   height: 100%;
   background-color: #4da6ff;
 }
 .nav-bar{
-  text-align: left;
   font-size: 30px;
-  padding:5px;
   color: white;
   background-color: #404040;
-  height: 5%;
+  height: 12%;
+}
+.logo-container{
+  background-color: inherit;
+  height: 100%;
+  display: inline;
 }
 
-.nav-bar .search-container{
-  vertical-align: middle;
+.search-container{
+  background-color: inherit;
+  height: 100%;
   text-align: center;
+  padding: 20px 0;
+}
+.search-container, input{
+  width: 66%;
+}
+ .search-button{
+  height: 100%;
+  width: 34%;
+}
+
+.fa-bars{
+  padding: 20px;
+}
+
+.dropdown{
+    background-color: #004080;
+    z-index: 1;
+    width: 25vw!important;
+    height: 50vh;
+}
+
+.dropdown, li{
+  list-style-type: none;
+}
+
+.drop-head{
+  padding: 10px;
+}
+
+.main-body{
+  background-color: inherit;
+  height: inherit;
 }
 
 .filter-column{
-  float: left;
+  /* float: left; */
 }
 .Left{
   margin: 0;
@@ -34,6 +73,7 @@ body{
 .filter-column h3{
   text-align: center;
 }
+
 
 .footer{
   position: fixed;

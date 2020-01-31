@@ -1,6 +1,7 @@
 /* Most styles inspired by W3Schools */
 
 Body {
+  margin: 0;
   background-color: #404040;
 }
 ul {

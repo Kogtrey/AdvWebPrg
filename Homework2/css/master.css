@@ -1,0 +1,32 @@
+/* Colors */
+.light-gray{
+  color: #000;
+  background-color: #ddd;
+}
+
+.dark-gray{
+  color: #ffffff;
+  background-color: #404040;
+}
+
+.darker-gray{
+  color: #ffffff;
+  background-color: #525252;
+}
+
+.white{
+  color: #000!important;
+  background-color: #ffffff!important;
+}
+
+.black{
+  color: #ffffff;
+  background-color: #000;
+}
+
+
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}

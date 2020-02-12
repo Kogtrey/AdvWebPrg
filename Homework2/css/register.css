@@ -1,6 +1,10 @@
 body{
   background-color: #ddd;
 }
+.header{
+  text-align: center;
+
+}
 .content{
 
 }
@@ -34,4 +38,12 @@ body{
   padding: 15px 14px;
   width: 100%;
   text-align: center;
+}
+.valid{
+  border-color: #39e600;
+}
+
+.invalid{
+  border-color: #ff0000!important;
+
 }

@@ -15,32 +15,32 @@
       '.' converts the argument into strings and then joins them.</p>
 
       <pre><code>
-        &lt;?php 
+        &lt;?php
         $firstString = 'I like ';
         $nextString = 'to run.';
-        $sentence = $firstString.nextString;
-        echo $sentence
+        $sentence = $firstString.$nextString;
+        echo $sentence;
         ?>
 
         &lt;?php
         $firstNum = '1';
         $nextNum = '3';
-        $sum = $firstNum+nextNum;
-        echo $sum
+        $sum = $firstNum+$nextNum;
+        echo $sum;
         ?>
       </code> </pre>
       <h5>Output</h5>
         <?php
         $firstString = 'I like ';
         $nextString = 'to run.';
-        $sentence = $firstString.nextString;
+        $sentence = $firstString.$nextString;
         echo $sentence;
         ?>
 
         <?php
         $firstNum = '1';
         $nextNum = '3';
-        $sum = $firstNum+nextNum;
+        $sum = $firstNum+$nextNum;
         echo $sum;
         ?>
 

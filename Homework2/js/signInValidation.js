@@ -107,7 +107,7 @@ function DeleteMessage(parent, idInvalid){
   if(document.getElementById(idInvalid) != null){
     element = document.getElementById(idInvalid);
     element.parentNode.removeChild(element);
-    
+
   }
 }
 

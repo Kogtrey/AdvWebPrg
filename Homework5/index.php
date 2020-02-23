@@ -124,8 +124,15 @@
         $number = '2';
         $product = $number * 2;
         echo $product;
+        $x = 1;
+        var_dump($x);
          ?>
          <p>Advantages: Easy to understand and code due to readability. Disadvantages: Could lead to unwanted results when it decides incorrectly</p>
+         <h3>Question 6</h3>
+         <h5>Expected Result</h5>
+         <pre> <code>
+           int(8)1
+         </code> </pre>
     </div>
   </body>
 </html>

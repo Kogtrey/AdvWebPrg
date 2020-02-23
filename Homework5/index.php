@@ -132,13 +132,16 @@
            int(1)string(16)"just no"int(2)int(2)
          </code> </pre>
          <h5>Actual</h5>
-         <?php
-         $x = 1;
-         var_dump($x);
-         $y = $z = $x + $x;
-         $x = "just no";
-         var_dump($x, $y, $z);
-         ?>
+         <pre> <code>
+           <?php
+           $x = 1;
+           var_dump($x);
+           $y = $z = $x + $x;
+           $x = "just no";
+           var_dump($x, $y, $z);
+           ?>
+
+         </code> </pre>
     </div>
   </body>
 </html>

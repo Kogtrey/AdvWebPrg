@@ -127,21 +127,71 @@
          ?>
          <p>Advantages: Easy to understand and code due to readability. Disadvantages: Could lead to unwanted results when it decides incorrectly</p>
          <h3>Question 6</h3>
-         <h5>Expected Result</h5>
+         <h5>What will this output?</h5>
          <pre> <code>
-           int(1)string(16)"just no"int(2)int(2)
-         </code> </pre>
-         <h5>Actual</h5>
-         <pre> <code>
-           <?php
+           &lt;?php
            $x = 1;
            var_dump($x);
            $y = $z = $x + $x;
            $x = "just no";
            var_dump($x, $y, $z);
            ?>
-
          </code> </pre>
+         <h5>Expected Result</h5>
+         <pre> <code>
+           int(1)string(7)"just no"int(2)int(2)
+         </code> </pre>
+         <h5>Actual</h5>
+         <?php
+         $x = 1;
+         var_dump($x);
+         $y = $z = $x + $x;
+         $x = "just no";
+         var_dump($x, $y, $z);
+         ?>
+         <h3>Second set of Code</h3>
+         <pre> <code>
+           &lt;?php
+           $even_numbers =[];
+           $even_numbers[2] = 0;
+           $even_numbers["Melissa"] = 1;
+           $even_numbers[0] = 2;
+           print_r($even_numbers);
+           var_dump($even_numbers);
+           var_dump(print_r($even_numbers, true));
+           ?>
+         </code> </pre>
+         <h5>Expected Results</h5>
+         <pre> <code>
+           Array
+           (
+            [0]=> 2
+            [2]=> 0
+            ["Melissa"]=> 1
+           )array(3){
+             [0]=>
+             int(2)
+             [2]=>
+             int(0)
+             ["Melissa"]=>
+             int(1)
+           }Array
+           (
+            [0]=> 2
+            [2]=> 0
+            ["Melissa"]=> 1
+           )
+         </code> </pre>
+         <h5>Actual</h5>
+         <?php
+         $even_numbers =[];
+         $even_numbers[2] = 0;
+         $even_numbers["Melissa"] = 1;
+         $even_numbers[0] = 2;
+         print_r($even_numbers);
+         var_dump($even_numbers);
+         var_dump(print_r($even_numbers, true));
+         ?>
     </div>
   </body>
 </html>

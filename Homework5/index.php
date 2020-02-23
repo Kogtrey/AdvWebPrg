@@ -124,15 +124,21 @@
         $number = '2';
         $product = $number * 2;
         echo $product;
-        $x = 1;
-        var_dump($x);
          ?>
          <p>Advantages: Easy to understand and code due to readability. Disadvantages: Could lead to unwanted results when it decides incorrectly</p>
          <h3>Question 6</h3>
          <h5>Expected Result</h5>
          <pre> <code>
-           int(8)1
+           int(1)string(16)"just no"int(2)int(2)
          </code> </pre>
+         <h5>Actual</h5>
+         <?php
+         $x = 1;
+         var_dump($x);
+         $y = $z = $x + $x;
+         $x = "just no";
+         var_dump($x, $y, $z);
+         ?>
     </div>
   </body>
 </html>

@@ -163,24 +163,7 @@
          </code> </pre>
          <h5>Expected Results</h5>
          <pre> <code>
-           Array
-           (
-            [0]=> 2
-            [2]=> 0
-            ["Melissa"]=> 1
-           )array(3){
-             [0]=>
-             int(2)
-             [2]=>
-             int(0)
-             ["Melissa"]=>
-             int(1)
-           }Array
-           (
-            [0]=> 2
-            [2]=> 0
-            ["Melissa"]=> 1
-           )
+           Array([0]=>2[2]=>0["Melissa"]=>1)array(3){[0]=>int(2)[2]=>int(0)["Melissa"]=>int(1)}Array([0]=>2[2]=>0["Melissa"]=>1)
          </code> </pre>
          <h5>Actual</h5>
          <?php

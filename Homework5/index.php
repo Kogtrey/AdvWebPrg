@@ -46,6 +46,13 @@
 
       <br>
       <h3>Question 2</h3>
+        &lt;?php
+        $people = array(
+          'people' => array('a'=> 'Jack','b' => 'John')
+          'numbers' => array(1,2,3,4,5,6),
+          'animals' => array('Dog', 5 => 'cat','mouse')
+        );
+        ?>
       <br>
       <h3>Question 3</h3>
       <br>

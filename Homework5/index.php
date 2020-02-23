@@ -102,7 +102,7 @@
 
       $output = print_r($string,true);
       echo $output;
-
+      echo '<br>';
       var_dump($string);
       ?>
     </div>

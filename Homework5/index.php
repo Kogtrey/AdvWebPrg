@@ -60,8 +60,51 @@
       </pre>
       <br>
       <h3>Question 3</h3>
+      <p>In order to store the value returned by print_r(), you need to add 'true' as the second argument.
+      This argument tells the function wether or not to return a value <br>
+      Example:
+      <br>
+      </p>
+      <pre><code>
+        &alt;?php
+        $input = "Hello";
+        $output = print_r($input,true);
+        echo $output;
+      </code>
+      </pre>
+      <h5>Output</h5>
+      <?php
+      $input = "Hello";
+      $output = print_r($input,true);
+      echo $output;
+       ?>
       <br>
       <h3>Question 4</h3>
+      <p>print_r will show human readable information about a variable. var_dump() will show structured information about one or more expressions.
+        <br>
+        Example:
+        <br>
+      </p>
+      <pre> <code>
+        &lt;?php
+        $string  = 'This is a string';
+
+        $output = print_r($string,true);
+        echo $output;
+
+        var_dump($string);
+        ?>
+      </code>
+      </pre>
+      <h5>Output</h5>
+      <?php
+      $string  = 'This is a string';
+
+      $output = print_r($string,true);
+      echo $output;
+
+      var_dump($string);
+      ?>
     </div>
   </body>
 </html>

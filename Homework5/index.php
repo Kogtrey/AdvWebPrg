@@ -105,6 +105,27 @@
       echo '<br>';
       var_dump($string);
       ?>
+      <br>
+      <h3>Question 5</h3>
+      <!-- https://stackoverflow.com/questions/7394711/what-is-dynamic-typing -->
+      <p>A language has dynamic typing when it does not associate values strictly with a specific type, but it is designed to "decide" what the type of a value should be at runtime, based on how you are attempting to use it.
+        <br>
+        Example:
+        <br> </p>
+        <pre><code>
+          &lt;?php
+          $number = '2';
+          $product = $number * 2;
+          echo $product;
+          ?>
+        </code></pre>
+        <h5>Output</h5>
+        <?php
+        $number = '2';
+        $product = $number * 2;
+        echo $product;
+         ?>
+         <p>Advantages: Easy to understand and code due to readability. Disadvantages: Could lead to unwanted results when it decides incorrectly</p>
     </div>
   </body>
 </html>

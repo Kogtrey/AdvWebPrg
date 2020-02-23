@@ -46,6 +46,7 @@
 
       <br>
       <h3>Question 2</h3>
+      <p>The three ways to assign and initialize an array are listed below</p>
       <pre><code>
         &lt;?php
         $people = array(

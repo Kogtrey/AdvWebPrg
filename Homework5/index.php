@@ -91,7 +91,7 @@
 
         $output = print_r($string,true);
         echo $output;
-
+        echo "&lt;br>"
         var_dump($string);
         ?>
       </code>

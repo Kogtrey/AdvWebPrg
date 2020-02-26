@@ -13,8 +13,10 @@
       <div class="content">
         <h3>Name</h3>
         <p><?php echo $_POST['first'].' '.$_POST['last'] ?></p>
+        <br>
+        <h3>Email</h3>
       </div>
-
+      <p><?php echo $_POST['email'] ?></p>
     </div>
   </body>
 </html>

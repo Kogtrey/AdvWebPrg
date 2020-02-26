@@ -81,7 +81,7 @@ function validatePage() {
   // }
   if(document.getElementsByClassName('invalid')[0] == undefined){
     console.log(document.getElementsByClassName('invalid'));
-    location.replace("../index.html");
+    // location.replace("../index.html");
   }
   // else if (!valid) {
   //   alert("Make sure every field is completed");

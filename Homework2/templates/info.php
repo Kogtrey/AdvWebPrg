@@ -15,8 +15,8 @@
         <p><?php echo $_POST['first'].' '.$_POST['last'] ?></p>
         <br>
         <h3>Email</h3>
-      </div>
-      <p><?php echo $_POST['email'] ?></p>
+        <p><?php echo $_POST['email'] ?></p>
+      </div>  
     </div>
   </body>
 </html>

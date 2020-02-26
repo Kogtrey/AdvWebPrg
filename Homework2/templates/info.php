@@ -12,7 +12,7 @@
       </div>
       <div class="content">
         <h3>Name</h3>
-        <p><?php echo $_Post['first'].' '.$_Post['last'] ?></p>
+        <p><?php echo $_POST['first'].' '.$_POST['last'] ?></p>
       </div>
 
     </div>

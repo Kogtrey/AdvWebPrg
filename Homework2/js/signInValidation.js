@@ -73,11 +73,20 @@ function validateForm(id){
 }
 
 function validatePage() {
+  var empty = false;
+  message = 'Fix Errors to Continue';
   var inputs = document.getElementsByClassName('error');
-  if(inputs == undefined){
+  var vals = document.getElementsByClassName('input');
+  for (var i = 0; i < vals.length; i++) {
+    if(vals[i].value == ''){
+      empty = true;
+      message = "Fields are missing";
+    }
+  }
+  if(inputs[0] == undefined && !empty){
     return true;
   }
-  alert("Fix Errors to Continue");
+  alert(message);
   return false;
 }
 
@@ -86,7 +95,7 @@ function AppendMessage(text, parent, newId) {
   if(document.getElementById(newId)==null){
     var div = parent;
     var h6 = document.createElement('h6');
-    h6.classlist.add("error");
+    h6.classList.add("error");
     h6.id = newId;
     var textNode = document.createTextNode(text);
     h6.appendChild(textNode);

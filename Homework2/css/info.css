@@ -3,4 +3,9 @@ body{
 }
 .paper{
   box-shadow: 0 0 10 lightgray;
+  width: 800;
+  height: 1100;
+  background-color: #ffffff;
+  margin: 10% 20% 0 20%
+
 }

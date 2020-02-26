@@ -7,7 +7,14 @@
   </head>
   <body>
     <div class="paper">
-      <h4>Paper Here</h4>
+      <div class="header">
+          <h1>Information</h1>
+      </div>
+      <div class="content">
+        <h3>Name</h3>
+        <p><?php echo $_Post['first'].' '.$_Post['last'] ?></p>
+      </div>
+
     </div>
   </body>
 </html>

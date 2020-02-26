@@ -74,21 +74,16 @@ function validateForm(id){
 
 function validatePage() {
   var valid = false;
-  // for (var i = 0; i < document.getElementsByClassName('input').length; i++) {
-  //   if(document.getElementsByClassName('input')[i] == null){
-  //     valid = false;
-  //   }
-  // }
+
   if(document.getElementsByClassName('invalid')[0] == undefined){
     console.log(document.getElementsByClassName('invalid'));
+    return true;
     // location.replace("../index.html");
+  }else{
+    alert("Fix Errors to Continue");
+    return false;
   }
-  // else if (!valid) {
-  //   alert("Make sure every field is completed");
-  // }
-  else{
-    alert("Fix errors in fields to continue");
-  }
+
 }
 
 

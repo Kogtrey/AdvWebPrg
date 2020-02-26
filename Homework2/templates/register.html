@@ -15,7 +15,7 @@
 
     <div class="content w3-card">
       <div class="register w3-card darker-gray">
-        <form class="" action="/info.php" method="post">
+        <form class="" action="./info.php" method="post" onsubmit="return validatePage()">
           <div id="name-info"class="name-info">
             <h2>Name Information</h2>
             <div id="first-name">
@@ -39,7 +39,7 @@
             </div>
           </div>
           <div class="Button-Container">
-            <button class="Button-Continue w3-xlarge" type="Submit" name="Continue" onclick="validatePage()">
+            <button class="Button-Continue w3-xlarge" type="Submit" name="Continue">
               Continue
               <i class="fa fa-angle-right"></i>
             </button>

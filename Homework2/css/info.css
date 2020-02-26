@@ -3,11 +3,10 @@ body{
 }
 .paper{
   box-shadow: 0 0 10px black;
-  padding: 0 40% 0 40%;
   width: 800px;
   height: 1100px;
   background-color: #ffffff;
-  margin: 10% 20% 0 20%
+  margin: 10% 20% 0 20%;
 }
 .header{
   text-align: center;

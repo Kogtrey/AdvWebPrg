@@ -73,17 +73,12 @@ function validateForm(id){
 }
 
 function validatePage() {
-  var valid = false;
-
-  if(document.getElementsByClassName('invalid')[0] == undefined){
-    console.log(document.getElementsByClassName('invalid'));
+  var inputs = document.getElementsByClassName('error');
+  if(inputs == undefined){
     return true;
-    // location.replace("../index.html");
-  }else{
-    alert("Fix Errors to Continue");
-    return false;
   }
-
+  alert("Fix Errors to Continue");
+  return false;
 }
 
 
@@ -91,6 +86,7 @@ function AppendMessage(text, parent, newId) {
   if(document.getElementById(newId)==null){
     var div = parent;
     var h6 = document.createElement('h6');
+    h6.classlist.add("error");
     h6.id = newId;
     var textNode = document.createTextNode(text);
     h6.appendChild(textNode);

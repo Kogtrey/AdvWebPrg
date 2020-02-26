@@ -15,7 +15,7 @@
 
     <div class="content w3-card">
       <div class="register w3-card darker-gray">
-        <form class="" action="info.php" method="post">
+        <form class="" action="/info.php" method="post">
           <div id="name-info"class="name-info">
             <h2>Name Information</h2>
             <div id="first-name">
@@ -38,16 +38,16 @@
               <input id="ConfirmPasswordIn"class="input" type="password" placeholder="Confirm Password..." onblur="validateForm('ConfirmPasswordIn')">
             </div>
           </div>
+          <div class="Button-Container">
+            <button class="Button-Continue w3-xlarge" type="Submit" name="Continue" onclick="validatePage()">
+              Continue
+              <i class="fa fa-angle-right"></i>
+            </button>
 
+          </div>
         </form>
 
-        <div class="Button-Container">
-          <button class="Button-Continue w3-xlarge" type="button" name="Continue" onclick="validatePage()">
-            Continue
-            <i class="fa fa-angle-right"></i>
-          </button>
 
-        </div>
       </div>
     </div>
 

@@ -43,7 +43,7 @@
       if($valid){
         $host = "webdev.cs.umt.edu";
         $dbuser = "kn106816";
-        $dbpass = "iloveWeezer777";
+        $dbpass = "";
         $dbname = "kn106816";
 
         $conn = mysqli_connect($host,$dbuser,$dbpass,$dbname)

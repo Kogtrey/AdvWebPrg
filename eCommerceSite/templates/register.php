@@ -36,7 +36,7 @@
       function check_data($data){
         $data = trim($data);
         $data = stripslashes($data);
-        $data = htmlspecialchars(4data);
+        $data = htmlspecialchars($data);
         return $data;
       }
 

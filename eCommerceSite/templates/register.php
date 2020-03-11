@@ -41,16 +41,16 @@
       }
 
       if($valid){
-        $host = "webdev.cs.umt.edu"
-        $dbuser = "kn106816"
-        $dbpass = ""
-        $dbname = "kn106816"
+        $host = "webdev.cs.umt.edu";
+        $dbuser = "kn106816";
+        $dbpass = "";
+        $dbname = "kn106816";
 
-        $conn = mysqli_connect($host,$dbuser,$dbpass,$dbname)
+        $conn = mysqli_connect($host,$dbuser,$dbpass,$dbname);
           or die('Could not connect');
         echo "Connected successfully <br>";
 
-        $sql = "INSERT INTO auth (Username,Email,password)VALUES ('$username','$email','$password')"
+        $sql = "INSERT INTO auth (Username,Email,password)VALUES ('$username','$email','$password')";
 
         mysqli_query($conn,$sql);
 

@@ -46,7 +46,7 @@
         $dbpass = "";
         $dbname = "kn106816";
 
-        $conn = mysqli_connect($host,$dbuser,$dbpass,$dbname);
+        $conn = mysqli_connect($host,$dbuser,$dbpass,$dbname)
           or die('Could not connect');
         echo "Connected successfully <br>";
 

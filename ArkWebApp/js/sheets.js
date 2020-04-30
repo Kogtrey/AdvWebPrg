@@ -1,6 +1,6 @@
 // Client ID and API key from the Developer Console
-var CLIENT_ID = '1061113568610-8s98fduq68fl1e5fdpt1etoi7odh30ei.apps.googleusercontent.com';
-var API_KEY = 'AIzaSyDQgv6vM0I0Mj1yIkGorIMc27gvUhxcuNA';
+var CLIENT_ID = '358527910927-6bdqn581g8k3miu3dn24isjmt7aqujv6.apps.googleusercontent.com';
+var API_KEY = 'AIzaSyDQYWpEaVQyjQr-QJ3PI2tXbcj8Gt2b2F8';
 
 var MY_SPREADSHEET_ID = '1SU1HKT0YZcZNY6KMISaPXAr4GhjHgCpTuqiYr19g-qQ';
 var DINO_SHEET_RANGE = 'Sheet1!A2:J';

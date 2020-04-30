@@ -9,20 +9,19 @@
   text-align: center;
 }
 
-.hleft {
-  height: 5%;
-  width:33%;
-}
 .hcenter {
   color: #ffffff;
   height: 5%;
-  width: 33%;
+  width: 66%;
+}
+.center-vert{
+  padding: 2% 0 2% 0;
 }
 .hright {
   position: relative;
   overflow: hidden;
+  padding: 4% 0 2% 0;
   text-align: right;
-  margin-top: 4.5%;
   height: 5%;
   width: 33%;
 }

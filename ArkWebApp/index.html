@@ -7,36 +7,30 @@
   </head>
   <body>
     <div class="header">
-      <div class="hleft">
-        <h1>Icon</h1>
-      </div>
-      <div class="hcenter">
+      <div class="hcenter center-vert">
         <h1>Ark Dinosaur Statitics</h1>
       </div>
-      <div class="hright">
+      <div class="hright center-vert">
         <button id="authorize_button" class="sign" style="display: none;">Authorize</button>
         <button id="signout_button" class="sign" style="display: none;">Sign Out</button>
       </div>
     </div>
     <!--Add buttons to initiate auth sequence and sign out-->
     <div class="main">
-      <button id="5" type="button" name="button" onclick="showPlot(this.id)">Get Dino Info</button>
+      <select id="selection"class="dinos" name="dinos">
+      </select>
       <button type="button" name="button"onclick="showPlot_All()">Show All Dinos</button>
 
       <div id="plots" class="radar-container">
         <canvas id="myChart"></canvas>
       </div>
 
-      <pre id="content" style="white-space: pre-wrap;"></pre>
     </div>
     <div class="footer">
 
     </div>
 
-
-
-
-
+    <script src="./libs/jquery-3.4.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="./js/sheets.js" charset="utf-8"></script>
     <script async defer src="https://apis.google.com/js/api.js"

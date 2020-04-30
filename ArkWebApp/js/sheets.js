@@ -120,7 +120,6 @@ function pageSetup(){
    }).then(function(response) {
      var range = response.result;
      if (range.values.length > 0) {
-       appendPre('Dino info');
        for (i = 0; i < range.values.length; i++) {
          var row = range.values[i];
          let dino = new Dino(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9]);
@@ -132,7 +131,6 @@ function pageSetup(){
      }
 
      names = nameList();
-     console.log(names);
      createOptions(Dinos,names);
 
 
@@ -165,14 +163,14 @@ function showPlot(id){
 }
 
 function showPlot_All(){
-  document.getElementById('myChart').style.display = 'none';
+
   for (var i = 0; i < Dinos.length; i++) {
     newDino = Dinos[i]
-    plot(newDino,i)
+    plot(newDino)
   }
 }
 
-function plot(dino,idnum){
+function plot(dino){
   //get The div
   var div = document.getElementById('plots');
 
@@ -221,8 +219,18 @@ function nameList(){
 }
 
 function createOptions(Dinos,list){
-  var select = document.getElementById('Dinos');
+  document.getElementById('plots').innerHTML = '';
+  var select = document.getElementById('selection');
   for (var i = 0; i < list.length; i++) {
-    select.options[select.options.length] = new Option(list[i],Dinos[i]);
+    select.options[select.options.length] = new Option(list[i],i);
   }
 }
+
+
+$(document).ready(function(){
+  $('#selection').change(function(){
+    document.getElementById('plots').innerHTML = '';
+    var DinoIndex = $('#selection').val();
+    plot(Dinos[DinoIndex]);
+  });
+});

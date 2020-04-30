@@ -15,7 +15,7 @@ var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
 var authorizeButton = document.getElementById('authorize_button');
 var signoutButton = document.getElementById('signout_button');
 
-var DINOS = [];
+var Dinos = [];
 
 class Dino {
   constructor(name,health,stamina,oxygen,food,weight,melee,speed,gender,species) {
@@ -32,7 +32,11 @@ class Dino {
   }
 
   getInfo(){
-    return this.name + ", " + this.gender + " " + this.species
+    return this.name + ", " + this.gender + " " + this.species;
+  }
+
+  getStats(){
+    return [this.health,this.stamina,this.oxygen,this.food,this.weight,this.melee,this.speed];
   }
 }
 
@@ -75,7 +79,7 @@ function updateSigninStatus(isSignedIn) {
   if (isSignedIn) {
     authorizeButton.style.display = 'none';
     signoutButton.style.display = 'block';
-    createDinoList();
+    pageSetup();
   } else {
     authorizeButton.style.display = 'block';
     signoutButton.style.display = 'none';
@@ -109,7 +113,7 @@ function appendPre(message) {
 }
 
 //Function to setup spreadsheet access
-function createDinoList(){
+function pageSetup(){
   gapi.client.sheets.spreadsheets.values.get({
      spreadsheetId: MY_SPREADSHEET_ID,
      range: DINO_SHEET_RANGE,
@@ -120,13 +124,105 @@ function createDinoList(){
        for (i = 0; i < range.values.length; i++) {
          var row = range.values[i];
          let dino = new Dino(row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9]);
-         appendPre(dino.getInfo());
-         DINOS.push(dino);
+         Dinos.push(dino);
+
        }
      } else {
        appendPre('No data found.');
      }
+
+     names = nameList();
+     console.log(names);
+     createOptions(Dinos,names);
+
+
    }, function(response) {
      appendPre('Error: ' + response.result.error.message);
    });
+}
+
+function showPlot(id){
+  var canvas = document.getElementById('myChart');
+  canvas.style.display = 'block';
+
+  var ctx = canvas.getContext('2d');
+  var chart = new Chart(ctx, {
+    //Type of chart to create
+    type: 'radar',
+
+    data: {
+      labels: ['Health','Stamina','Oxygen','Food','Weighet','Melee','Speed'],
+      datasets: [{
+        label: Dinos[id].name,
+        backgroundColor: 'rgb(255, 99, 132,0.1)',
+        borderColor: 'rgb(255,99,132,0.1)',
+        data: Dinos[id].getStats()
+      }]
+    },
+
+    options: {}
+  });
+}
+
+function showPlot_All(){
+  document.getElementById('myChart').style.display = 'none';
+  for (var i = 0; i < Dinos.length; i++) {
+    newDino = Dinos[i]
+    plot(newDino,i)
+  }
+}
+
+function plot(dino,idnum){
+  //get The div
+  var div = document.getElementById('plots');
+
+  //make a new canvas
+  var canvas = document.createElement('canvas');
+  var ctx = canvas.getContext('2d');
+
+  //create a new chart on the new canvas
+  var chart = new Chart(ctx, {
+    //Type of chart to create
+    type: 'radar',
+
+    data: {
+      labels: ['Health','Stamina','Oxygen','Food','Weighet','Melee','Speed'],
+      datasets: [{
+        label: dino.name,
+        backgroundColor: 'rgb(255, 99, 132,0.1)',
+        borderColor: 'rgb(255,99,132,0.1)',
+        data: dino.getStats(),
+        options: {
+          layout: {
+            padding: {
+              left: 0,
+              right: 0,
+              top: 0,
+              bottom: 0
+            }
+          }
+        }
+      }]
+    },
+
+    options: {}
+  });
+
+  //Add canvas to div
+  div.appendChild(canvas);
+}
+
+function nameList(){
+  list = []
+  for (var i = 0; i < Dinos.length; i++) {
+    list.push(Dinos[i].name);
+  }
+  return list;
+}
+
+function createOptions(Dinos,list){
+  var select = document.getElementById('Dinos');
+  for (var i = 0; i < list.length; i++) {
+    select.options[select.options.length] = new Option(list[i],Dinos[i]);
+  }
 }
